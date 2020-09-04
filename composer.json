@@ -1,0 +1,20 @@
+{
+   "name":"vitoconava/inputs",
+   "type": "library",
+   "license": "unlicense",
+   "authors":[
+      {
+         "name":"victor navarrete",
+         "email":"victornavarrete@live.cl"
+      }
+   ],
+    "keywords":[
+      "inputs",
+      "php"
+   ], 
+   "suggest": {
+      "php": ">=7.2",
+      "ralouphie/getallheaders":"^3.0",
+      "voku/anti-xss":"^4.1"
+   }
+}
