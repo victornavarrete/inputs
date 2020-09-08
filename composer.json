@@ -1,17 +1,19 @@
 {
    "name":"vitoconava/inputs",
-   "type": "library",
-   "license": "unlicense",
+   "type":"library",
+   "license":"unlicense",
+   "version":1.0.0,
    "authors":[
       {
          "name":"victor navarrete",
-         "email":"victornavarrete@live.cl"
+         "email":"victornavarrete@live.cl",
+         "role": "Developer"
       }
    ],
-    "keywords":[
-      "inputs",
-      "php"
-   ], 
+   "autoload": {
+        "files": ["src/Inputs.php"]
+    },
+   "keywords":["inputs","php"], 
    "suggest": {
       "php": ">=7.2",
       "ralouphie/getallheaders":"^3.0",
