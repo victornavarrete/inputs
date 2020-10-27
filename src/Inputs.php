@@ -157,21 +157,22 @@ Class Inputs {
     public function server_name( ){
 		return $this->server('SERVER_NAME', false);
     }  
-
-    public function is_origin_request(){ 
+    
+    public function is_origin_request($all_methods=false){ 
         $origin = $this->origin(); 
         $protocol = $this->protocol();   
-        if ($this->is_method('post')) { 
-            if (isset($origin)) {
-                return true;
-                $address = $protocol.'://' . $_SERVER['SERVER_NAME'];
+        if ($this->is_method('post') || $all_methods ) { 
+            if (isset($origin)) { 
+                $address = $protocol.'://'.$_SERVER['SERVER_NAME'];
                 if (strpos($address, $origin) !== 0) {
                     return false;
                 }
+                return true;
             }
         } 
         return null;
     } 
+     
     
     public function user_agent(){
 		return $this->server('HTTP_USER_AGENT',true);
