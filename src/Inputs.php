@@ -171,8 +171,7 @@ Class Inputs {
             }
         } 
         return null;
-    } 
-     
+    }
     
     public function user_agent(){
 		return $this->server('HTTP_USER_AGENT',true);
