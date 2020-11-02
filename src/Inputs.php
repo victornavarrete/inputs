@@ -91,9 +91,13 @@ Class Inputs {
         }    
     }  
 
-    public function input_stream(  $xss_clean = true){  
+    public function input_stream($xss_clean = true){  
        $value = (string) file_get_contents('php://input','r');  
 	   return ($xss_clean === TRUE) ? $this->xss_clean($value) : $value;
+    }
+
+    public function input_json($xss_clean = true){   
+       return json_decode($this->input_stream($value));
     }  
 
     public function request_header($index=null, $xss_clean = true){   
