@@ -96,8 +96,8 @@ Class Inputs {
 	   return ($xss_clean === TRUE) ? $this->xss_clean($value) : $value;
     }
 
-    public function input_json($xss_clean = true){   
-       return json_decode($this->input_stream($value));
+    public function input_json($assoc=false,$xss_clean = true){   
+       return json_decode($this->input_stream($value),$assoc);
     }  
 
     public function request_header($index=null, $xss_clean = true){   
